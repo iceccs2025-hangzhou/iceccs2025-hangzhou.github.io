@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICECCS 2024 - Conference Program</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .day-section {
+            margin-bottom: 50px;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .day-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .day-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .day-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #667eea;
+            margin-right: 15px;
+        }
+
+        .venue {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .event, .keynote, .session {
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid;
+            transition: all 0.3s ease;
+        }
+
+        .event {
+            background: linear-gradient(45deg, #f8f9ff, #e8efff);
+            border-left-color: #667eea;
+        }
+
+        .keynote {
+            background: linear-gradient(45deg, #fff8f0, #ffe8d0);
+            border-left-color: #ff8c42;
+        }
+
+        .session {
+            background: linear-gradient(45deg, #f0fff8, #d0ffe8);
+            border-left-color: #42c575;
+        }
+
+        .break {
+            background: linear-gradient(45deg, #fff0f8, #ffd0e8);
+            border-left-color: #e842a5;
+            text-align: center;
+            font-style: italic;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .time {
+            font-weight: 600;
+            color: #667eea;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.1);
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        .session-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 15px;
+            border-bottom: 2px solid rgba(102, 126, 234, 0.2);
+            padding-bottom: 8px;
+        }
+
+        .keynote-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .speaker {
+            font-size: 1.1rem;
+            color: #ff8c42;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .session-chair {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .presentation {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 8px;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .presentation:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .presentation-time {
+            font-weight: 600;
+            color: #667eea;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .presentation-title {
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+
+        .authors {
+            color: #666;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        .online-tag {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-left: 10px;
+            font-weight: 500;
+        }
+
+        .event-type {
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+
+        .host {
+            color: #666;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .day-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .venue {
+                align-self: flex-start;
+            }
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ICECCS 2024</h1>
+            <p class="subtitle">International Conference on Engineering of Complex Computer Systems</p>
+        </header>
+
+        <!-- Day 1: July 1, Tuesday -->
+        <div class="day-section">
+            <div class="day-header">
+                <h2 class="day-title">July 1, Tuesday</h2>
+                <span class="venue">Wangyue Hall, 3rd Floor</span>
+            </div>
+
+            <div class="event">
+                <div class="time">13:00-18:00</div>
+                <div class="event-type">Registration</div>
+            </div>
+
+            <div class="session">
+                <div class="session-title">Position Papers for LLMs</div>
+                
+                <div class="presentation">
+                    <div class="presentation-time">14:30-14:50</div>
+                    <div class="presentation-title">A Vision for Access Control in LLM Agent Systems</div>
+                    <div class="authors">Dong Huang, Jie Li, Hongyi Cai, Xinfeng Li, Yijia Xu, Wenbing Tang, Jie Zhang, and Yang Liu</div>
+                </div>
+
+                <div class="presentation">
+                    <div class="presentation-time">14:50-15:10</div>
+                    <div class="presentation-title">Agent Behavior: The Regulatory Object of the Agent-Centric Online Ecosystem in Digital Age</div>
+                    <div class="authors">Qiang Zhang, Pei Yan, Yijia Xu, Xinfeng Li, Hongyi Cai, Chuanpo Fu, Yong Fang, Yang Liu</div>
+                </div>
+
+                <div class="presentation">
+                    <div class="presentation-time">15:10-15:30</div>
+                    <div class="presentation-title">Empowering Embodied Agents with Semantic Intelligence</div>
+                    <div class="authors">Wenbing Tang, Meilin Zhu, Fenghua Wu, Xinfeng Li, and Yang Liu</div>
+                </div>
+
+                <div class="break">
+                    <div class="time">15:30-15:50</div>
+                    Tea Break
+                </div>
+
+                <div class="presentation">
+                    <div class="presentation-time">15:50-16:10</div>
+                    <div class="presentation-title">An Analytical Perspective on Software Engineering for Large Language Models</div>
+                    <div class="authors">Tianlin Li, Qiang Hu, Chong Wang, Jian Zhang, Wei Ma, Aishan Liu, Jingyi Wang, and Yang Liu</div>
+                </div>
+
+                <div class="presentation">
+                    <div class="presentation-time">16:10-16:30</div>
+                    <div class="presentation-title">LiCoVer: LLM-Powered Automated OSS License Compliance Verification</div>
+                    <div class="authors">Shuhao Chang, Xin Li, Jigang Xie, Hao Wu, and Haijun Wang</div>
+                </div>
+
+                <div class="presentation">
+                    <div class="presentation-time">16:30-16:50</div>
+                    <div class="presentation-title">UFPC: A Unified Framework for Source and Binary Program Comprehension</div>
+                    <div class="authors">Yiran Zhang, Weisong Sun, Yuqiang Sun, Chengwei Liu, Xiaohong Chen, and Yang Liu</div>
+                </div>
+
+                <div class="presentation">
+                    <div class="presentation-time">16:50-17:10</div>
+                    <div class="presentation-title">TestCaseMig: LLM-Driven Test Case Migration for Evolving Codebases</div>
+                    <div class="authors">Wuhe Axi, Xin Li, Jigang Xie, Xitao Li, and Haijun Wang</div>
+                </div>
+
+                <div class="presentation">
+                    <div class="presentation-time">17:10-17:30</div>
+                    <div class="presentation-title">Evolaris: A Roadmap to Self-Evolving Software Intelligence Management</div>
+                    <div class="authors">Chengwei Liu, Wenbo Guo, Yuxin Zhang, Limin Wang, Sen Chen, Lei Bu, and Yang Liu</div>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="time">18:00-19:30</div>
+                <div class="event-type">Dinner</div>
+            </div>
+        </div>
+
+        <!-- Day 2: July 2, Wednesday -->
+        <div class="day-section">
+            <div class="day-header">
+                <h2 class="day-title">July 2, Wednesday</h2>
+                <span class="venue">Yinyue Hall, 3rd Floor</span>
+            </div>
+
+            <div class="event">
+                <div class="time">9:00-17:00</div>
+                <div class="event-type">Registration</div>
+            </div>
+
+            <div class="event">
+                <div class="time">9:00-9:30</div>
+                <div class="event-type">Opening Remark</div>
+                <div class="host">Host: Weiwei Xu</div>
+            </div>
+
+            <div class="keynote">
+                <div class="time">9:30-10:30</div>
+                <div class="session-chair">Session Chair: Xiaofei Xie</div>
+                <div class="keynote-title">Failure-Based Testing</div>
+                <div class="speaker">Prof. Tsong Yueh Chen</div>
+            </div>
+
+            <div class="break">
+                <div class="time">10:30-11:00</div>
+                Tea Break
+            </div>
+
+            <div class="session">
+                <div class="session-title">Machine Learning for Complex Systems</div>
+                
+                <div class="presentation">
+                    <div class="presentation-time">11:00-11:30</div>
+                    <div class="presentation-title">Runtime Anomaly Detection for Drones: An Integrated Rule-Mining and Unsupervised-Learning Approach</div>
+                    <div class="authors">Ivan Tan, Wei Minn, Christopher M. Poskitt, Lwin Khin Shar, and Lingxiao Jiang</div>
+                </div>
+
+                <div class="presentation">
+                    <div class="presentation-time">11:30-12:00</div>
+                    <div class="presentation-title">FinPTA: An Effective Model for Financial Sentiment Analysis</div>
+                    <div class="authors">Chen Yang, Xiao Yi, Guisheng Fan, Huiqun Yu, and Hengrun Zhang</div>
+                </div>
+
+                <div class="presentation">
+                    <div class="presentation-time">12:00-12:30</div>
+                    <div class="presentation-title">Single Image Defocus Deblurring in Photography Systems</div>
+                    <div class="authors">He Zhao, Shenggui Ling, Hongmin Zhan, and Rui Shi</div>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="time">12:30-14:30</div>
+                <div class="event-type">Lunch</div>
+            </div>
+
+            <div class="session">
+                <div class="session-chair">Session Chair: Tianlin Li</div>
+                <div class="session-title">Machine Learning for Complex Systems</div>
+                
+                <div class="presentation">
+                    <div class="presentation-time">14:30-15:00</div>
+                    <div class="presentation-title">AMF-GCN: An Adaptive Graph Convolution Network for Pull-up Evaluation</div>
+                    <div class="authors">Xianglong Cao, Xin Li, and Jijun Tong</div>
+                </div>
+
+                <div class="presentation">
+                    <div class="presentation-time">15:00-15:30</div>
+                    <div class="presentation-title">A Q-learning-driven multi-crossover NSGA-II framework for energy-efficient hybrid flow shop scheduling</div>
+                    <div class="authors">Jiale Wang, Mingyue Jiang, Hongyun Huang, Rui Xie, and Zuohua Ding</div>
+                </div>
+            </div>
+
+            <div class="break">
+                <div class="time">15:30-16:00</div>
+                Tea Break
+            </div>
+
+            <div class="session">
+                <div class="session-title">Trustworthy Deep Learning</div>
+                
+                <div class="presentation">
+                    <div class="presentation-time">16:00-16:30</div>
+                    <div class="presentation-title">MixRecLGB: Language-Enhanced Mixed Attention for Temporal Context Modeling in Time Series Forecasting</div>
+                    <div class="authors">Yuxin Mei, Luxi Zhang, Li Han, and Jing Liu</div>
+                </div>
+
+                <div class="presentation">
+                    <div class="presentation-time">16:30-17:00</div>
+                    <div class="presentation-title">Certified Enumeration of AI Explanations: A Focus on Monotonic Classifiers</div>
+                    <div class="authors">Clément Contet, Rosalie Defourné, and Aurélie Hurault</div>
+                </div>
+
+                <div class="presentation">
+                    <div class="presentation-time">17:00-17:30</div>
+                    <div class="presentation-title">Random Resampling of Training Data for Effective Verification Strategy Prediction</div>
+                    <div class="authors">Bharti Chimdyalwar, Priyanka Darke, R Venkatesh, and Supratik Chakraborty</div>
+                    <span class="online-tag">Online</span>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="time">18:00-19:30</div>
+                <div class="event-type">Dinner</div>
+            </div>
+        </div>
+
+        <!-- Day 3: July 3, Thursday -->
+        <div class="day-section">
+            <div class="day-header">
+                <h2 class="day-title">July 3, Thursday</h2>
+                <span class="venue">Wangyue Hall, 3rd Floor</span>
+            </div>
+
+            <div class="event">
+                <div class="time">9:00-17:00</div>
+                <div class="event-type">Registration</div>
+            </div>
+
+            <div class="keynote">
+                <div class="time">9:30-10:30</div>
+                <div class="session-chair">Session Chair: Mingyue Jiang</div>
+                <div class="keynote-title">Securing the Mind and Body: Trustworthy Agent Systems Powered by Vision-Language Models</div>
+                <div class="speaker">Prof. Tianwei Zhang</div>
+            </div>
+
+            <div class="break">
+                <div class="time">10:30-11:00</div>
+                Tea Break
+            </div>
+
+            <div class="session">
+                <div class="session-title">Trustworthy Deep Learning</div>
+                
+                <div class="presentation">
+                    <div class="presentation-time">11:00-11:30</div>
+                    <div class="presentation-title">PAMUS: An Entropy-Loss-Based Poisoning Attack for Undermining Machine Unlearning</div>
+                    <div class="authors">Xudong Jiang, Yuhang Ma, Wei Xu, and Jiahui Wen</div>
+                </div>
+
+                <div class="presentation">
+                    <div class="presentation-time">11:30-12:00</div>
+                    <div class="presentation-title">DeepMR: A Learning-Based Approach for Efficient Mutation Reduction in DNN Fault Localization</div>
+                    <div class="authors">Huaizhi Yin, Weiwei Wang, and Ruilian Zhao</div>
+                </div>
+
+                <div class="presentation">
+                    <div class="presentation-time">12:00-12:30</div>
+                    <div class="presentation-title">Investigating the OOV Problem and Its Impacts on Neural Program Repair</div>
+                    <div class="authors">Weijun Guo, Xuedan Zheng, and Mingyue Jiang</div>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="time">12:30-14:30</div>
+                <div class="event-type">Lunch</div>
+            </div>
+
+            <div class="session">
+                <div class="session-chair">Session Chair: Yiran Zhang</div>
+                <div class="session-title">Edge Computing Systems</div>
+                
+                <div class="presentation">
+                    <div class="presentation-time">14:30-15:00</div>
+                    <div class="presentation-title">Auction-Based Caching Decision Algorithm for IoT Traffic with Popular and Fresh Content</div>
+                    <div class="authors">Hao Xu, Alvin Valera, Wuyungerile Li, and Winston K.G. Seah</div>
+                </div>
+
+                <div class="presentation">
+                    <div class="presentation-time">15:00-15:30</div>
+                    <div class="presentation-title">Maximizing Long-term Task Completion Ratio of 3D-UAV-Enabled Wirelessly Powered MEC System</div>
+                    <div class="authors">Tixin Chen, Guanqun Shen, Xinnan Zhu, Shaojun Zhu, Bincheng Zhu, and Kaikai Chi</div>
+                </div>
+            </div>
+
+            <div class="break">
+                <div class="time">15:30-16:00</div>
+                Tea Break
+            </div>
+
+            <div class="session">
+                <div class="session-title">LLM Empowered Software Engineering</div>
+                
+                <div class="presentation">
+                    <div class="presentation-time">16:00-16:30</div>
+                    <div class="presentation-title">Towards Efficient and Secure Multimodal Misinformation Detection</div>
+                    <div class="authors">Jianhao Wei, Yixiao Li, Xiaolong Li, Ming Zhao, Jin Zhang, Limei Li, and Junfeng Yang</div>
+                </div>
+
+                <div class="presentation">
+                    <div class="presentation-time">16:30-17:00</div>
+                    <div class="presentation-title">Leveraging Large Language Models for Feature Envy Detection: A Context-Aware and Reasoning-Driven Approach</div>
+                    <div class="authors">Jiamin Guo, Yangyang Zhao, Zhifei Chen, and Liming Nie</div>
+                </div>
+
+                <div class="presentation">
+                    <div class="presentation-time">17:00-17:30</div>
+                    <div class="presentation-title">RustMap: Towards Project-Scale C-to-Rust Migration via Program Analysis and LLM</div>
+                    <div class="authors">Xuemeng Cai, Jiakun Liu, Xiping Huan, Yijun Yu, Haitao Wu, Chunmiao Li, Bo Wang, Imam Nur Bani Yusuf, and Lingxiao Jiang</div>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="time">18:00-20:00</div>
+                <div class="event-type">Banquet</div>
+            </div>
+        </div>
+
+        <!-- Day 4: July 4, Friday -->
+        <div class="day-section">
+            <div class="day-header">
+                <h2 class="day-title">July 4, Friday</h2>
+                <span class="venue">Wangyue Hall, 3rd Floor</span>
+            </div>
+
+            <div class="event">
+                <div class="time">9:00-12:00</div>
+                <div class="event-type">Registration</div>
+            </div>
+
+            <div class="keynote">
+                <div class="time">9:30-10:30</div>
+                <div class="session-chair">Session Chair: Yuan Zhou</div>
+                <div class="keynote-title">Trustworthiness Assurance of Intelligent Software Systems in the Age of Generative AI</div>
+                <div class="speaker">Prof. Lei Ma</div>
+            </div>
+
+            <div class="break">
+                <div class="time">10:30-11:00</div>
+                Tea Break
+            </div>
+
+            <div class="session">
+                <div class="session-title">Formal Methods</div>
+                
+                <div class="presentation">
+                    <div class="presentation-time">11:00-11:30</div>
+                    <div class="presentation-title">LTL Model Checking of Concurrent Self Modifying Code</div>
+                    <div class="authors">Tayssir Touili and Olzhas Zhangeldinov</div>
+                </div>
+
+                <div class="presentation">
+                    <div class="presentation-time">11:30-12:00</div>
+                    <div class="presentation-title">Checking Linearizability of Multi-Core Task Management and Scheduling System</div>
+                    <div class="authors">Qiaowen Jia, Liangjie Lv, Yuting Yan, Bohua Zhan, Peng Wu, Jifeng Hao, Hong Ye, Chao Wang, and Yi Lv</div>
+                </div>
+
+                <div class="presentation">
+                    <div class="presentation-time">12:00-12:30</div>
+                    <div class="presentation-title">Contract-based Verification of Digital Twins</div>
+                    <div class="authors">Muhammad Naeem and Cristina Seceleanu</div>
+                    <span class="online-tag">Online</span>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="time">12:30-14:30</div>
+                <div class="event-type">Lunch</div>
+            </div>
+
+            <div class="session">
+                <div class="session-chair">Session Chair: Wenbing Tang</div>
+                <div class="session-title">Formal Methods</div>
+                
+                <div class="presentation">
+                    <div class="presentation-time">14:30-15:00</div>
+                    <div class="presentation-title">Verifying Neural Network Controlled Systems by Combining Taylor Models and Linear Abstract Domains</div>
+                    <div class="authors">Minghao Li, Liqian Chen, Xinyu Wang, Shifu Yang, Yuan Zhou, and Ji Wang</div>
+                </div>
+
+                <div class="presentation">
+                    <div class="presentation-time">15:00-15:30</div>
+                    <div class="presentation-title">Model Checking Nondeterministic Behaviours in the Tendermint Byzantine Fault Tolerant Blockchain Consensus Protocol</div>
+                    <div class="authors">Yisong Yu, Zhe Hou, Naipeng Dong, and Jin Song Dong</div>
+                </div>
+            </div>
+
+            <div class="break">
+                <div class="time">15:30-16:00</div>
+                Tea Break
+            </div>
+
+            <div class="session">
+                <div class="session-title">Program Analysis</div>
+                
+                <div class="presentation">
+                    <div class="presentation-time">16:00-16:30</div>
+                    <div class="presentation-title">Uncover the Risks of Outdated Dependencies in Software Supply Chains: Insights from the npm Ecosystem</div>
+                    <div class="authors">Fenglin Bi, Cheng Liang, Yanbin Zhang, Yang Chen, and Wei Wang</div>
+                </div>
+
+                <div class="presentation">
+                    <div class="presentation-time">16:30-17:00</div>
+                    <div class="presentation-title">EMS-HFL: A Hybrid based Fault Localization</div>
+                    <div class="authors">Donghua Wang, Zheng Li, Hengyuan Liu, and Yong Liu</div>
+                </div>
+
+                <div class="presentation">
+                    <div class="presentation-time">17:00-17:30</div>
+                    <div class="presentation-title">CONTAST: Graph Embedding based Fault Localization Integrating AST and Context-Awareness</div>
+                    <div class="authors">Haodong He, Tingting Wu, Qi Jin, and Zuohua Ding</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="scroll-top" onclick="scrollToTop()">↑</button>
+
+    <script>
+        // Scroll to top functionality
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Show/hide scroll to top button
+        window.addEventListener('scroll', function() {
+            const scrollButton = document.querySelector('.scroll-top');
+            if (window.pageYOffset > 300) {
+                scrollButton.classList.add('visible');
+            } else {
+                scrollButton.classList.remove('visible');
+            }
+        });
+
+        // Add smooth scrolling for better UX
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effects to presentations
+            const presentations = document.querySelectorAll('.presentation');
+            presentations.forEach(presentation => {
+                presentation.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateX(5px)';
+                });
+                presentation.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateX(0)';
+                });
+            });
+
+            // Add click-to-copy functionality for presentation titles
+            presentations.forEach(presentation => {
+                const title = presentation.querySelector('.presentation-title');
+                if (title) {
+                    title.style.cursor = 'pointer';
+                    title.addEventListener('click', function() {
+                        navigator.clipboard.writeText(this.textContent).then(function() {
+                            // Show a brief confirmation
+                            const originalText = title.textContent;
+                            title.textContent = 'Title copied!';
+                            title.style.color = '#42c575';
+                            setTimeout(() => {
+                                title.textContent = originalText;
+                                title.style.color = '#2d3748';
+                            }, 1500);
+                        }).catch(function() {
+                            console.log('Could not copy text');
+                        });
+                    });
+                }
+            });
+
+            // Add animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all day sections
+            const daySections = document.querySelectorAll('.day-section');
+            daySections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+
+            // Add search functionality
+            const searchHTML = `
+                <div style="margin-bottom: 30px; text-align: center;">
+                    <input type="text" id="searchInput" placeholder="Search presentations, authors, or topics..." 
+                           style="width: 100%; max-width: 500px; padding: 12px 20px; border: 2px solid #667eea; 
+                                  border-radius: 25px; font-size: 16px; outline: none; transition: all 0.3s ease;">
+                </div>
+            `;
+            
+            const header = document.querySelector('header');
+            header.insertAdjacentHTML('afterend', searchHTML);
+
+            // Search functionality
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                const presentations = document.querySelectorAll('.presentation');
+                
+                presentations.forEach(presentation => {
+                    const title = presentation.querySelector('.presentation-title').textContent.toLowerCase();
+                    const authors = presentation.querySelector('.authors').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || authors.includes(searchTerm)) {
+                        presentation.style.display = 'block';
+                        presentation.style.background = searchTerm ? 'rgba(102, 126, 234, 0.1)' : '';
+                    } else {
+                        presentation.style.display = searchTerm ? 'none' : 'block';
+                        presentation.style.background = '';
+                    }
+                });
+
+                // Hide/show sessions based on whether they have visible presentations
+                const sessions = document.querySelectorAll('.session');
+                sessions.forEach(session => {
+                    const visiblePresentations = session.querySelectorAll('.presentation[style*="display: block"], .presentation:not([style*="display: none"])');
+                    session.style.display = (visiblePresentations.length > 0 || !searchTerm) ? 'block' : 'none';
+                });
+            });
+
+            // Add focus effect to search input
+            searchInput.addEventListener('focus', function() {
+                this.style.borderColor = '#764ba2';
+                this.style.boxShadow = '0 0 0 3px rgba(102, 126, 234, 0.1)';
+            });
+
+            searchInput.addEventListener('blur', function() {
+                this.style.borderColor = '#667eea';
+                this.style.boxShadow = 'none';
+            });
+        });
+
+        // Add print styles
+        const printStyles = `
+            @media print {
+                body { background: white !important; }
+                .container { box-shadow: none !important; background: white !important; }
+                .scroll-top { display: none !important; }
+                .day-section { break-inside: avoid; }
+                .presentation { break-inside: avoid; }
+                .keynote { break-inside: avoid; }
+                .session { break-inside: avoid; }
+                #searchInput { display: none !important; }
+                .day-section:hover { transform: none !important; }
+                .presentation:hover { transform: none !important; }
+            }
+        `;
+        
+        const styleSheet = document.createElement('style');
+        styleSheet.textContent = printStyles;
+        document.head.appendChild(styleSheet);
+    </script>
+</body>
+</html>
