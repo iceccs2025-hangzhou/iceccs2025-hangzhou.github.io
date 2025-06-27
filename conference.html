@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICECCS 2024 Conference Program</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10pt;
+        }
+        
+        .schedule-table th, .schedule-table td {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        /* Header styles */
+        .title-header {
+            background-color: #ffffff;
+            text-align: center;
+            font-weight: bold;
+            color: #000000;
+            font-size: 12pt;
+            padding: 15px;
+        }
+        
+        /* Day headers */
+        .day-header {
+            background-color: #d9ead3;
+            text-align: center;
+            font-weight: bold;
+            color: #000000;
+            padding: 10px;
+        }
+        
+        /* Time column */
+        .time-slot {
+            background-color: #cfe2f3;
+            text-align: center;
+            font-weight: bold;
+            color: #000000;
+            white-space: nowrap;
+            width: 120px;
+        }
+        
+        /* Keynote sessions */
+        .keynote {
+            background-color: #fff2cc;
+            font-weight: bold;
+            color: #000000;
+            padding: 8px;
+        }
+        
+        /* Regular sessions */
+        .session-header {
+            background-color: #cfe2f3;
+            text-align: center;
+            font-weight: bold;
+            color: #000000;
+        }
+        
+        /* Paper presentations - alternating backgrounds */
+        .paper-light {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        
+        .paper-dark {
+            background-color: #fff2cc;
+            color: #000000;
+        }
+        
+        /* Break sessions */
+        .break-session {
+            background-color: #ffffff;
+            text-align: center;
+            color: #000000;
+        }
+        
+        /* Author names styling */
+        .authors {
+            font-style: italic;
+            font-size: 9pt;
+            color: #666;
+            margin-top: 4px;
+        }
+        
+        /* Paper titles */
+        .paper-title {
+            font-weight: normal;
+            margin-bottom: 4px;
+        }
+        
+        /* Special markers */
+        .online {
+            color: #0066cc;
+            font-weight: bold;
+        }
+        
+        .journal-first {
+            color: #008000;
+            font-style: italic;
+        }
+        
+        .short-paper {
+            color: #666666;
+            font-style: italic;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 4px;
+            }
+            
+            .schedule-table {
+                font-size: 9pt;
+            }
+            
+            .schedule-table th, .schedule-table td {
+                padding: 6px 8px;
+            }
+            
+            .time-slot {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table class="schedule-table">
+            <!-- Conference Title -->
+            <tr>
+                <td colspan="9" class="title-header">ICECCS 2024 Program (UTC+8)</td>
+            </tr>
+            
+            <tr><td colspan="9" style="height: 10px;"></td></tr>
+            
+            <!-- Day 1: July 1, Tuesday -->
+            <tr>
+                <td colspan="9" class="day-header">Day 1: 1 July, 2024 (Tuesday)</td>
+            </tr>
+            
+            <tr>
+                <td class="time-slot">13:00 - 18:00</td>
+                <td colspan="8" class="break-session">Registration</td>
+            </tr>
+            
+            <tr>
+                <td class="time-slot">14:30 - 15:30</td>
+                <td colspan="8" class="session-header">Position Papers for LLMs</td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td colspan="8" class="paper-light">
+                    <div class="paper-title">A Vision for Access Control in LLM Agent Systems</div>
+                    <div class="authors">Dong Huang, Jie Li, Hongyi Cai, Xinfeng Li, Yijia Xu, Wenbing Tang, Jie Zhang, and Yang Liu</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td colspan="8" class="paper-dark">
+                    <div class="paper-title">Agent Behavior: The Regulatory Object of the Agent-Centric Online Ecosystem in Digital Age</div>
+                    <div class="authors">Qiang Zhang, Pei Yan, Yijia Xu, Xinfeng Li, Hongyi Cai, Chuanpo Fu, Yong Fang, Yang Liu</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td colspan="8" class="paper-light">
+                    <div class="paper-title">Empowering Embodied Agents with Semantic Intelligence</div>
+                    <div class="authors">Wenbing Tang, Meilin Zhu, Fenghua Wu, Xinfeng Li, and Yang Liu</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="time-slot">15:30 - 15:50</td>
+                <td colspan="8" class="break-session">Tea Break</td>
+            </tr>
+            
+            <tr>
+                <td class="time-slot">15:50 - 17:30</td>
+                <td colspan="8" class="session-header">LLM Applications and Analysis</td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td colspan="8" class="paper-dark">
+                    <div class="paper-title">An Analytical Perspective on Software Engineering for Large Language Models</div>
+                    <div class="authors">Tianlin Li, Qiang Hu, Chong Wang, Jian Zhang, Wei Ma, Aishan Liu, Jingyi Wang, and Yang Liu</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td colspan="8" class="paper-light">
+                    <div class="paper-title">LiCoVer: LLM-Powered Automated OSS License Compliance Verification</div>
+                    <div class="authors">Shuhao Chang, Xin Li, Jigang Xie, Hao Wu, and Haijun Wang</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td colspan="8" class="paper-dark">
+                    <div class="paper-title">UFPC: A Unified Framework for Source and Binary Program Comprehension</div>
+                    <div class="authors">Yiran Zhang, Weisong Sun, Yuqiang Sun, Chengwei Liu, Xiaohong Chen, and Yang Liu</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="time-slot">18:00 - 19:30</td>
+                <td colspan="8" class="break-session">Dinner</td>
+            </tr>
+            
+            <tr><td colspan="9" style="height: 15px;"></td></tr>
+            
+            <!-- Day 2: July 2, Wednesday -->
+            <tr>
+                <td colspan="9" class="day-header">Day 2: 2 July, 2024 (Wednesday)</td>
+            </tr>
+            
+            <tr>
+                <td class="time-slot">09:00 - 17:00</td>
+                <td colspan="8" class="break-session">Registration</td>
+            </tr>
+            
+            <tr>
+                <td class="time-slot">09:00 - 09:30</td>
+                <td colspan="8" class="break-session">Opening Remark (Host: Weiwei Xu)</td>
+            </tr>
+            
+            <tr>
+                <td class="time-slot">09:30 - 10:30</td>
+                <td colspan="8" class="keynote">Keynote 1: Failure-Based Testing, Prof. Tsong Yueh Chen</td>
+            </tr>
+            
+            <tr>
+                <td class="time-slot">10:30 - 11:00</td>
+                <td colspan="8" class="break-session">Tea Break</td>
+            </tr>
+            
+            <tr>
+                <td class="time-slot">11:00 - 12:30</td>
+                <td colspan="8" class="session-header">Machine Learning for Complex Systems (Session Chair: Xiaofei Xie)</td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td colspan="8" class="paper-light">
+                    <div class="paper-title">Runtime Anomaly Detection for Drones: An Integrated Rule-Mining and Unsupervised-Learning Approach</div>
+                    <div class="authors">Ivan Tan, Wei Minn, Christopher M. Poskitt, Lwin Khin Shar, and Lingxiao Jiang</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td colspan="8" class="paper-dark">
+                    <div class="paper-title">FinPTA: An Effective Model for Financial Sentiment Analysis</div>
+                    <div class="authors">Chen Yang, Xiao Yi, Guisheng Fan, Huiqun Yu, and Hengrun Zhang</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td colspan="8" class="paper-light">
+                    <div class="paper-title">Single Image Defocus Deblurring in Photography Systems</div>
+                    <div class="authors">He Zhao, Shenggui Ling, Hongmin Zhan, and Rui Shi</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="time-slot">12:30 - 14:30</td>
+                <td colspan="8" class="break-session">Lunch</td>
+            </tr>
+            
+            <tr>
+                <td class="time-slot">14:30 - 16:00</td>
+                <td colspan="8" class="session-header">Trustworthy Deep Learning (Session Chair: Tianlin Li)</td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td colspan="8" class="paper-dark">
+                    <div class="paper-title">MixRecLGB: Language-Enhanced Mixed Attention for Temporal Context Modeling in Time Series Forecasting</div>
+                    <div class="authors">Yuxin Mei, Luxi Zhang, Li Han, and Jing Liu</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td colspan="8" class="paper-light">
+                    <div class="paper-title">Certified Enumeration of AI Explanations: A Focus on Monotonic Classifiers</div>
+                    <div class="authors">Clément Contet, Rosalie Defourné, and Aurélie Hurault</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td colspan="8" class="paper-dark">
+                    <div class="paper-title"><span class="online">(Online)</span> Random Resampling of Training Data for Effective Verification Strategy Prediction</div>
+                    <div class="authors">Bharti Chimdyalwar, Priyanka Darke, R Venkatesh, and Supratik Chakraborty</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="time-slot">18:00 - 19:30</td>
+                <td colspan="8" class="break-session">Dinner</td>
+            </tr>
+            
+            <tr><td colspan="9" style="height: 15px;"></td></tr>
+            
+            <!-- Day 3: July 3, Thursday -->
+            <tr>
+                <td colspan="9" class="day-header">Day 3: 3 July, 2024 (Thursday)</td>
+            </tr>
+            
+            <tr>
+                <td class="time-slot">09:30 - 10:30</td>
+                <td colspan="8" class="keynote">Keynote 2: Securing the Mind and Body: Trustworthy Agent Systems Powered by Vision-Language Models, Prof. Tianwei Zhang</td>
+            </tr>
+            
+            <tr>
+                <td class="time-slot">10:30 - 11:00</td>
+                <td colspan="8" class="break-session">Tea Break</td>
+            </tr>
+            
+            <tr>
+                <td class="time-slot">11:00 - 12:30</td>
+                <td colspan="8" class="session-header">Edge Computing Systems (Session Chair: Yiran Zhang)</td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td colspan="8" class="paper-light">
+                    <div class="paper-title">Auction-Based Caching Decision Algorithm for IoT Traffic with Popular and Fresh Content</div>
+                    <div class="authors">Hao Xu, Alvin Valera, Wuyungerile Li, and Winston K.G. Seah</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td colspan="8" class="paper-dark">
+                    <div class="paper-title">Maximizing Long-term Task Completion Ratio of 3D-UAV-Enabled Wirelessly Powered MEC System</div>
+                    <div class="authors">Tixin Chen, Guanqun Shen, Xinnan Zhu, Shaojun Zhu, Bincheng Zhu, and Kaikai Chi</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="time-slot">15:30 - 16:00</td>
+                <td colspan="8" class="break-session">Tea Break</td>
+            </tr>
+            
+            <tr>
+                <td class="time-slot">16:00 - 17:30</td>
+                <td colspan="8" class="session-header">LLM Empowered Software Engineering</td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td colspan="8" class="paper-light">
+                    <div class="paper-title">Towards Efficient and Secure Multimodal Misinformation Detection</div>
+                    <div class="authors">Jianhao Wei, Yixiao Li, Xiaolong Li, Ming Zhao, Jin Zhang, Limei Li, and Junfeng Yang</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td colspan="8" class="paper-dark">
+                    <div class="paper-title">RustMap: Towards Project-Scale C-to-Rust Migration via Program Analysis and LLM</div>
+                    <div class="authors">Xuemeng Cai, Jiakun Liu, Xiping Huan, Yijun Yu, Haitao Wu, Chunmiao Li, Bo Wang, Imam Nur Bani Yusuf, and Lingxiao Jiang</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="time-slot">18:00 - 20:00</td>
+                <td colspan="8" class="break-session">Banquet</td>
+            </tr>
+            
+            <tr><td colspan="9" style="height: 15px;"></td></tr>
+            
+            <!-- Day 4: July 4, Friday -->
+            <tr>
+                <td colspan="9" class="day-header">Day 4: 4 July, 2024 (Friday)</td>
+            </tr>
+            
+            <tr>
+                <td class="time-slot">09:30 - 10:30</td>
+                <td colspan="8" class="keynote">Keynote 3: Trustworthiness Assurance of Intelligent Software Systems in the Age of Generative AI, Prof. Lei Ma</td>
+            </tr>
+            
+            <tr>
+                <td class="time-slot">10:30 - 11:00</td>
+                <td colspan="8" class="break-session">Tea Break</td>
+            </tr>
+            
+            <tr>
+                <td class="time-slot">11:00 - 12:30</td>
+                <td colspan="8" class="session-header">Formal Methods (Session Chair: Yuan Zhou)</td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td colspan="8" class="paper-light">
+                    <div class="paper-title">LTL Model Checking of Concurrent Self Modifying Code</div>
+                    <div class="authors">Tayssir Touili and Olzhas Zhangeldinov</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td colspan="8" class="paper-dark">
+                    <div class="paper-title"><span class="online">(Online)</span> Contract-based Verification of Digital Twins</div>
+                    <div class="authors">Muhammad Naeem and Cristina Seceleanu</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="time-slot">16:00 - 17:30</td>
+                <td colspan="8" class="session-header">Program Analysis (Session Chair: Wenbing Tang)</td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td colspan="8" class="paper-light">
+                    <div class="paper-title">Uncover the Risks of Outdated Dependencies in Software Supply Chains: Insights from the npm Ecosystem</div>
+                    <div class="authors">Fenglin Bi, Cheng Liang, Yanbin Zhang, Yang Chen, and Wei Wang</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td colspan="8" class="paper-dark">
+                    <div class="paper-title">CONTAST: Graph Embedding based Fault Localization Integrating AST and Context-Awareness</div>
+                    <div class="authors">Haodong He, Tingting Wu, Qi Jin, and Zuohua Ding</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
