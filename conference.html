@@ -3,13 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICECCS 2025 Conference Program</title>
+    <title>ICECCS 2024 Conference Program</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
             background-color: #f5f5f5;
+            overflow-x: auto;
+            overflow-y: scroll;
+        }
+        
+        /* Custom scrollbar styling for webkit browsers */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 6px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 6px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a1a1a1;
+        }
+        
+        /* For Firefox */
+        html {
+            scrollbar-width: auto;
+            scrollbar-color: #c1c1c1 #f1f1f1;
         }
         
         .container {
@@ -19,16 +46,17 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            min-height: 100vh;
         }
         
         .schedule-table {
-            width: 90%;
+            width: 100%;
             border-collapse: collapse;
             font-size: 10pt;
         }
         
         .schedule-table th, .schedule-table td {
-            padding: 8px 12px;
+            padding: 6px 10px;
             border: 1px solid #ddd;
             text-align: left;
             vertical-align: top;
@@ -61,6 +89,7 @@
             color: #000000;
             white-space: nowrap;
             width: 100px;
+            min-width: 100px;
         }
         
         /* Keynote sessions */
@@ -135,15 +164,35 @@
             }
             
             .schedule-table {
-                font-size: 9pt;
+                font-size: 8pt;
             }
             
             .schedule-table th, .schedule-table td {
-                padding: 6px 8px;
+                padding: 4px 6px;
             }
             
             .time-slot {
-                width: 100px;
+                width: 80px;
+                min-width: 80px;
+            }
+            
+            .authors {
+                font-size: 8pt;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .schedule-table {
+                font-size: 7pt;
+            }
+            
+            .time-slot {
+                width: 70px;
+                min-width: 70px;
             }
         }
     </style>
@@ -153,14 +202,14 @@
         <table class="schedule-table">
             <!-- Conference Title -->
             <tr>
-                <td colspan="9" class="title-header">ICECCS 2025 Program (UTC+8)</td>
+                <td colspan="9" class="title-header">ICECCS 2024 Program (UTC+8)</td>
             </tr>
             
             <tr><td colspan="9" style="height: 10px;"></td></tr>
             
             <!-- Day 1: July 1, Tuesday -->
             <tr>
-                <td colspan="9" class="day-header">Day 1: 1 July, 2025 (Tuesday)</td>
+                <td colspan="9" class="day-header">Day 1: 1 July, 2024 (Tuesday)</td>
             </tr>
             
             <tr>
